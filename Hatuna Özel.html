@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mervem ❤</title>
+  <style>
+    /* Sayfa genel stilleri */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      transition: background 0.5s ease-in-out;
+    }
+
+    /* Arkaplan resmi */
+    #backgroundImage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url('https://i.hizliresim.com/5b34uc5.jpg?_gl=1*tx8qn4*_ga*MjUzNTkyMjEzLjE3MzQ1NDg5MDQ.*_ga_M9ZRXYS2YN*MTczNDU1MzA2MC4yLjEuMTczNDU1MzA4MC40MC4wLjA.'); /* Arkaplan resmi URL'sini buraya ekleyebilirsin */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.9;
+    }
+
+h1 {
+      margin-bottom: 10px;
+      color: #ff0000;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #ffd700;
+    }
+
+    /* Buton stilleri */
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    /* GIF'lerin görünürlüğü için */
+    #backgroundGif {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  </style>
+</head>
+<body>
+  <!-- Arkaplan resmi alanı -->
+  <div id="backgroundImage"></div>
+<!-- Sayfa başlığı -->
+  <h1>Cennetimin Kapısı Mervem ❤️‍🔥</h1>
+  <!-- Altındaki açıklayıcı metin -->
+  <p>Ben süslü cümleler pek bilmem hanımefendi, Tek diyeceğim şudur ki cemaatim olur musun ?</p>
+
+  <!-- Butonlar -->
+  <button id="yesButton">Evettt :)</button>
+  <button id="noButton">Hayır :(</button>
+
+  <marquee behavior="scroll" direction="left" style="font-size: 20px; color: blue;">
+    Sahmeran ❤ Merve
+  </marquee>
+
+<div id="message"></div>
+
+  <!-- Arka planda gösterilecek GIF -->
+  <img id="backgroundGif" src="" alt="Background GIF">
+
+  <!-- JavaScript kısmı -->
+  <script>
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+    const messageDiv = document.getElementById('message');
+    const backgroundGif = document.getElementById('backgroundGif');
+
+    // Evet butonuna tıklandığında işlem
+    yesButton.addEventListener('click', () => {
+      messageDiv.innerHTML = "Sen benim için bir mucizesin, Rum Suresi'nde bahsedilen o sevgi ve huzurun somut bir örneğisin. ❤️‍🔥🤲";
+      backgroundGif.src = "https://s4.ezgif.com/tmp/ezgif-4-ca4d95ed89.gif"; // Mutlu çift GIF'i
+      backgroundGif.style.opacity = 1;
+    });
+
+    // Hayır butonuna tıklandığında işlem
+    noButton.addEventListener('click', () => {
+      messageDiv.innerHTML = "Her ayrılığın ardından Allah'ın bir hayrı vardır.";
+      backgroundGif.src = "https://media2.giphy.com/media/Jorv9LBFbvgbJp3AWX/giphy.gif?cid=6c09b952ncb1gkm8negj9athw2g4jebgyszgv2pexhqcg9iy&ep=v1_internal_gif_by_id&rid=giphy.gif"; // Ağlayan yalnız adam GIF'i
+      backgroundGif.style.opacity = 1;
+    });
+
+    // Sayfa yüklenince GIF'leri gizle
+    window.onload = () => {
+      backgroundGif.style.opacity = 0;
+    };
+  </script>
+</body>
+</html>
